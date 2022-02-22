@@ -1,0 +1,7 @@
+cmake_minimum_required (VERSION 3.0.2)
+project (sample)
+set(OpenCV_DIR /home/ravina/opencv-4.5.0/build)
+find_package(OpenCV REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable (${PROJECT_NAME}  extension2.cpp calculation.cpp)
+target_link_libraries (${PROJECT_NAME} ${OpenCV_LIBS})
